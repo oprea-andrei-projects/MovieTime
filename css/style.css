@@ -1,0 +1,344 @@
+*{
+
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "main"
+        "aside"
+        "footer"    
+    ;
+}
+
+.butoanePag{
+
+    grid-area: aside;
+
+    background-color: lightcoral;
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchArea{
+
+    grid-area: header;
+    width: 100%;
+    height: 25vh;
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.searchItems{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  
+
+
+}
+
+h2{
+
+    margin-left: 5px;
+}
+
+.search{
+
+    margin-left: 5px;
+    width: 70%;
+    height: 25px;
+
+}
+
+.searchBtn{
+
+    width: 25%;
+    height: 25px;
+}
+
+.displayArea{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+    grid-area: main;
+    background-color: violet;
+    width: 100%;
+    height: 72vh;
+
+
+}
+
+.card{
+
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+    border-radius: 5px;
+    width: 150px;
+    height: 200px;
+   
+    box-shadow:10px 5px 5px red;
+    margin:10px;
+  
+    background-color: black;
+
+}
+
+.id_Film{
+
+    display: none;
+}
+
+.zoomCard{
+
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+    border-radius: 5px;
+    width: 150px;
+    height: 200px;
+   
+    box-shadow:10px 5px 5px red;
+    margin:10px;
+
+    background-color: black;
+
+
+    transform: scale(2);
+
+    align-self: center;
+
+  position: relative;
+
+  top: 120px;
+  left:550px;
+
+
+}
+
+.details{
+
+    
+
+
+}
+
+li{
+    color: white;
+    font-size: 5px;
+
+    list-style: none;
+
+}
+
+
+/* #al{
+
+    position: absolute;
+    left: 45px;
+    top:300px;
+    
+    left: 5;
+
+    border: 1px solid red;
+
+}
+
+
+#ar{
+
+    position: absolute;
+    right: 45px;
+    top:300px;
+
+   
+  
+  
+    border: 1px solid red;
+
+} */
+
+.closing{
+    position: absolute;
+
+    width: 40px;
+    height: 40px;
+    right:45px ;
+    top: 65px;
+    
+    color: red;
+}
+
+
+.modal{
+
+
+   
+    width: 100%;
+    height: 100vh;
+   
+    background-color: rgba(0, 0, 0, 0.075);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+
+
+    /* z-index: 2; */
+    position: absolute;
+  
+    display: none;
+
+}
+
+.moviePoster{
+
+    display: block;
+    border-radius: 5px;
+
+    width: 100%;
+    height:175px;
+}
+
+.movieTitle{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 25px;
+    background-color: black;
+    color: orange;
+    font-weight: bold;
+    font-size: 10px;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+
+
+
+.contactArea{
+
+
+    grid-area: footer;
+    background-color: black;
+    color: white;
+}
+
+.reg{
+
+    margin-left: 5px;
+
+    font-size: 10px;
+}
+
+.fdiv1{
+
+    width: 100%;
+
+
+
+}
+
+
+.fa {
+    padding: 5px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 1px;
+    border-radius: 50%;
+  }
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: black;
+  color: white;
+}
+
+.fa-twitter {
+  background: black;
+  color: white;
+}
+
+
+.fa-instagram {
+    background: black;
+    color: white;
+  }
+
+
+@media(min-width:720px){
+
+
+    .searchArea{
+
+        
+        width: 100%;
+        height: 12vh;
+        background-color: black;
+        color: white;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .serachItems{
+
+        margin-left: auto;
+        margin-top: 25px;
+
+
+    }
+
+
+}
+
+
+@media(min-width:1020px){
+
+    .serachItems{
+
+       
+        margin-top: 25px;
+
+
+    }
+
+
+}
